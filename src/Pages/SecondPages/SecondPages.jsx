@@ -7,6 +7,7 @@ import {
   GithubOutlined,
   EyeOutlined,
 } from '@ant-design/icons';
+import hsia from '../../assets/EducationPhoto/hsia1.jpg.png'
 
 const SecondPages = () => {
     const navigate = useNavigate();
@@ -46,19 +47,22 @@ const SecondPages = () => {
             cover={
               <img
                 alt="project preview"
-                src="https://images.unsplash.com/photo-1581091870622-2a7de92d3d3b" // You can replace this with your image
+                src= {hsia} // You can replace this with your image
                 className="rounded-t-lg"
               />
             }
             bordered={false}
             className="shadow"
           >
-            <h3 className="text-lg font-semibold">Project Name</h3>
+            <h3 className="text-lg font-semibold">Hazrat Shahjalal International Airport</h3>
             <a href="#" className="text-blue-600 text-sm float-right" target="_blank" rel="noopener noreferrer">
-              Live Preview <EyeOutlined />
+              <a href="">Live preview</a> <EyeOutlined />
             </a>
             <p className="text-gray-600 mt-2 text-sm">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque consequuntur magni ullam...
+              1. ⁠Flight Management operation software Hazrat Shajalal International Airport.   <br />
+              2. ⁠Web Protal Establishment in Hazrat Shajalal International Airport(www.hsia.gov.bd). <br />
+              3. ⁠Call Center(13600/09614-013600) Establishment in Hazrat Shajalal International Airport. <br />
+              4. ⁠SOP for Flight Management Department in Hazrat Shajalal International Airport. <br />
             </p>
             <div className="mt-4 flex space-x-3">
               <Button type="primary" icon={<GithubOutlined />}>

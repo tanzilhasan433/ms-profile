@@ -88,7 +88,7 @@ const servicesData = [
             ))}
           </div>
                               <Button className='mt-5' type="primary" onClick={() => navigate('/second-page')}>Previous</Button>
-                               <Button className='ms-2' type="primary" onClick={() => navigate('/')}>Next</Button>
+                               <Button className='ms-2' type="primary" onClick={() => navigate('/contact-form')}>Next</Button>
         </div>
                               
       </div>

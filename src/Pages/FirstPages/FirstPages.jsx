@@ -19,8 +19,9 @@ const FirstPages = () => {
     return (
         
         
-                <div className="min-h-screen bg-gradient-to-r from-blue-900 to-blue-600 p-6 flex justify-center items-center">
-                    <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
+                <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-6 flex justify-center items-center">
+                    <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl m-4 p-8'>
+                                 <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
                         {/* Left Side - Profile */}
                         <div className="w-full md:w-1/2 p-8 flex flex-col items-center text-center">
                         <Avatar size={200} src={sirPhoto} className="mb-4" />
@@ -49,14 +50,14 @@ const FirstPages = () => {
                             </p>
 
                         <div className="flex space-x-4">
-                            <Button type="primary" size="large">Download CV</Button>
+                            <Button type="primary" className='bg-cyan-200' size="large">Download CV</Button>
                             <Button size="large" onClick={() => navigate('/contact')}>Contact Me</Button>
                         </div>
                         </div>
 
                         {/* Right Side - Experience */}
                         
-                        <div className="w-full md:w-1/2 bg-gray-50 p-8">
+                        <div className="w-full md:w-1/2 bg-gray-100 p-8">
                         <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
                         <Timeline
                             mode="left"
@@ -98,9 +99,12 @@ const FirstPages = () => {
                             },
                             ]}
                         />
-                               <Button type="primary" onClick={() => navigate('/second-page')}>Next</Button>
+                               <div className="flex justify-end">
+                                <Button type="primary" onClick={() => navigate('/second-page')}>1</Button>
+                                </div>
                         </div>
                                 
+                    </div>
                     </div>
                     
                     </div>
