@@ -3,7 +3,7 @@ import React from 'react';
 import { Card } from 'antd';
 import { EnvironmentOutlined, ClockCircleOutlined } from '@ant-design/icons';
 // import { Timeline, Card } from 'antd';
-import Flight from '../../assets/skills/flight management.PNG';
+import Flight from '../../assets/skills/flight management.jpeg';
 import Leader from '../../assets/skills/avsec.jpg';
 import Officer from '../../assets/skills/military traning.png';
 const { Meta } = Card;
