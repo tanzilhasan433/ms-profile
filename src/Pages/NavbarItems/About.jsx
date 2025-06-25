@@ -1,4 +1,4 @@
-import {  Avatar, Timeline, Card, } from 'antd';
+import {  Card } from 'antd';
 const { Meta } = Card;
 import Image from '../../assets/FirstPagePhoto/sir-8.jpeg'
 

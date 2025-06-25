@@ -1,5 +1,8 @@
 import { Button, Avatar, Timeline, Card, } from 'antd';
-// import { useNavigate } from 'react-router-dom';
+import { ClockCircleOutlined } from '@ant-design/icons';
+import { Typography } from 'antd';
+
+const { Title, Text } = Typography;
 import {
   FacebookFilled,
   TwitterSquareFilled,
@@ -12,6 +15,26 @@ import { useNavigate } from 'react-router';
 
 const { Meta } = Card;
 
+const experiences = [
+  {
+    year: '2022 - Present',
+    title: 'Squadron Leader – Bangladesh Air Force',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+  },
+  {
+    year: '2022 - Present',
+    title: 'ASM at Flight Management – HSIA',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+  },
+  {
+    year: '2022 - 2023',
+    title: 'Officer In-charge – Bangladesh Air Force C & M Unit',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+  },
+];
 
 const FirstPages = () => {
     // const navigate = useNavigate();
@@ -56,55 +79,34 @@ const FirstPages = () => {
                         </div>
 
                         {/* Right Side - Experience */}
-                        
-                        <div className="w-full md:w-1/2 bg-gray-100 p-8">
-                        <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
-                        <Timeline
-                            mode="left"
-                            items={[
-                            {
-                                label: '2022 - Present',
-                                children: (
-                                <div>
-                                    <p className="font-semibold">Airport Flight Management – Dhaka</p>
-                                    <p className="text-gray-600 text-sm">
-                                    * Officer in Charge (OIC) Unit | BAF Care and Maintenance Unit Lalmonirhat | December 2018 - January 2022 <br />
-                                    </p>
-                                </div>
-                                ),
-                            },
-                            {
-                                label: '2022 - Present',
-                                children: (
-                                <div>
-                                    <p className="font-semibold">Squadron Leader – Bangladesh Air Force</p>
-                                    <p className="text-gray-600 text-sm">
-                                            * Led the MODC Training Squadron, fostering professional development within the unit. <br />
-                                            * Honored with a letter of appreciation from the United States Air Force for contributions to Pacific Angel 19-1.
-                                    </p>
-                                </div>
-                                ),
-                            },
-                            {
-                                label: '2018 - 2022',
-                                children: (
-                                <div>
-                                    <p className="font-semibold">Officer In-charge – Bangladesh Air Force C & M Unit</p>
-                                    <p className="text-gray-600 text-sm">
-                                            
-                                            * Assumed responsibility for unit security, ensuring a safe and secure operating environment. <br />
-                                           </p>
-                                </div>
-                                ),
-                            },
-                            ]}
-                        />
-                               <div className="flex justify-end">
+                        <div className="max-w-2xl mx-auto md:w-1/2 bg-gray-100 p-6 rounded-md shadow">
+                            <Title level={3} className="text-center font-bold mb-8">
+                                Work Experience
+                            </Title>
+                            <Timeline mode="left" className="text-gray-700">
+                                {experiences.map((exp, index) => (
+                                <Timeline.Item
+                                    key={index}
+                                    dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}
+                                    color="blue"
+                                >
+                                    <Text className="text-blue-500 font-medium">{exp.year}</Text>
+                                    <br />
+                                    <Text strong className="text-lg block mt-1">
+                                    {exp.title}
+                                    </Text>
+                                    <Text className="text-gray-600 text-sm">{exp.description}</Text>
+                                </Timeline.Item>
+                                ))}
+                            </Timeline>
+                            <div className="text-center text-sm text-gray-400 mt-4">1</div>
+                                                           <div className="flex justify-end">
                                 <Button type="primary" onClick={() => navigate('/second-page')}>1</Button>
                                 </div>
-                        </div>
+                            </div>
                                 
                     </div>
+                    
                     </div>
                     
                     </div>
