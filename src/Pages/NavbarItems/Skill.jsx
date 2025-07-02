@@ -25,116 +25,118 @@ const Skill = () => {
                    <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
                        {/* Left Side - Profile */}
                          <div className="  w-full md:w-1/2 p-8 flex flex-col items-center "> 
-                         <h2 className='text-2xl font-bold m-4'>skill Pages  </h2>  
+                         <h2 className='text-2xl font-bold m-4'>Skill Pages  </h2>  
                             <div className='flex mb-4'>
                              
-                                      <div className='flex flex-wrap justify-start m-4 flex gap-4'>
+                                      <div className='flex flex-wrap justify-start m-2 flex gap-2'>
                                            
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full'  alt="example" src={flight} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full'  alt="example" src={flight} />}
                                             >
-                                                <Meta title="Flight Management" description="https://hsia.gov.bd/" />
+                                                <Meta className='font-bold' title="" description="Flight Management" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={hsia} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={hsia} />}  
                                             >
-                                                <Meta title="Airport HSIA" description="https://hsia.gov.bd/" />
+                                                <Meta className='font-bold' title="" description="HSIA" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260  }}
-                                                cover={< img className='h-38 w-full' alt="example" src={cargo} />}
+                                                style={{ width: 135, height: 180  }}
+                                                cover={< img className='h-28 w-full' alt="example" src={cargo} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Cargo Operation" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={cargo2} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={cargo2} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Cargo Operation" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={avsec} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={avsec} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="AVSEC" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={crisis} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={crisis} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Crisis Management" />
                                             </Card>
-
+                                            <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={jungle} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="Jungle Survival" />
+                                            </Card>
+                                           <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={militery} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="Military Training" />
+                                            </Card>
+                                              <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={public1} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="Public Service" />
+                                            </Card>
                                               
 
                                         </div>
                            </div>
                          </div>
-                       {/* Right Side - Experience */}                                 
-                         <div className="w-full flex flex-wrap justify-start md:w-1/2 bg-gray-100 p-8 gap-4">                                 
-                                                                                          <Card
+                       {/* Right Side - Experience */}    
+                                                  
+                         <div className="w-full flex flex-wrap justify-start md:w-1/2 bg-gray-100 p-8 gap-2 mt-18 mb-54">                                 
+                                             <Card
+                                             
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={joint} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={< img className='h-28 w-full' alt="example" src={joint} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Joint Service" />
+                                            </Card>
+
+                                              <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={public2} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="Public Affairs" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={< img className='h-38 w-full' alt="example" src={jungle} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={weapon} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
-                                            </Card>
-                                           <Card
-                                                hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={militery} />}
-                                            >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Weapon Traning" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={public1} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={sita} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="SITA" />
                                             </Card>
                                               <Card
                                                 hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={public2} />}
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={security} />}
                                             >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
-                                            </Card>
-                                              <Card
-                                                hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={weapon} />}
-                                            >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
-                                            </Card>
-                                              <Card
-                                                hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={sita} />}
-                                            >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
-                                            </Card>
-                                              <Card
-                                                hoverable
-                                                style={{ width: 200, height: 260 }}
-                                                cover={<img className='h-38 w-full' alt="example" src={security} />}
-                                            >
-                                                <Meta title="Flight Management" description="www.instagram.com" />
+                                                <Meta className='font-bold' title="" description="Security Management" />
                                             </Card> 
                              
                          </div>                                         

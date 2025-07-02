@@ -15,7 +15,7 @@ const Navbar = () => {
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Experience', path: '/experience' },
-    { label: 'Education', path: '/education' },
+    { label: 'Education', path: '/navbar-education' },
     { label: 'Course', path: '/course' },
     { label: 'Award', path: '/award' },
     { label: 'Skills', path: '/skills' },

@@ -16,6 +16,8 @@ import ProjectsPages from "../Pages/NavbarItems/ProjectsPages";
 import Experience from "../Pages/NavbarItems/Experience";
 import About from "../Pages/NavbarItems/About";
 import Award from "../Pages/NavbarItems/Award";
+import Education from "../Pages/NavbarItems/Education";
+import Certificate from "../Pages/SubPages/Certificate";
 
       export const router = createBrowserRouter([
     {
@@ -78,10 +80,14 @@ import Award from "../Pages/NavbarItems/Award";
                 path: 'award',
                 element: <Award></Award>
             },
-            // {
-            //     path: 'navbar-education',
-            //     element: <Award></Award>
-            // },
+            {
+                path: 'navbar-education',
+                element: <Education></Education>
+            },
+            {
+                path: 'certificate',
+                element: <Certificate></Certificate>
+            },
 
         ]
     },
