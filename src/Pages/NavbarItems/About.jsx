@@ -1,13 +1,15 @@
-import {  Card } from 'antd';
+import {  Button, Card } from 'antd';
+import { useNavigate } from 'react-router';
+import { HiChevronDoubleRight } from "react-icons/hi";
 const { Meta } = Card;
 import Image from '../../assets/FirstPagePhoto/sir-8.jpeg'
 
 const About = () => {
-   
+   const navigate = useNavigate();
     return (
-            <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-6 flex justify-center items-center">
-               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl m-4 p-8'>
-                   <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
+            <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-4 flex justify-center items-center">
+               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl  p-8'>
+                   <div className="bg-white rounded-xl shadow-lg h-135 w-250 max-w-5xl flex flex-col md:flex-row overflow-hidden">
                        {/* Left Side - Profile */}
                          <div className="  w-full md:w-1/2 p-8 flex flex-col items-center "> 
                          <h2 className='text-2xl font-bold m-4'>About of ASM Flight Management</h2>  
@@ -20,7 +22,9 @@ const About = () => {
                                 <p>My career has been defined by a steadfast commitment to leadership, operational excellence, and strategic planning across a range of dynamic and high-stakes roles.</p>
                               <br />
                                <p>
-                                Currently serving as the Airport Security Manager and Flight Management Officer at Hazrat Shahjalal International Airport (HSIA) since January 10, 2022, I specialize in the comprehensive management of airport flight operations. My core responsibilities include aircraft parking, gate allocation, airline coordination, slot management, and daily flight scheduling, along with the seamless facilitation of VIP and chartered flights. I’ve also overseen the allocation of check-in counters, entry gates, boarding bridges, and parking bays with precision and foresight.
+                                Currently serving as the Airport Security Manager and Flight Management Officer at Hazrat Shahjalal International Airport (HSIA) since January 10, 2022, I specialize in the comprehensive management of airport flight
+                                
+                                 {/* operations. My core responsibilities include aircraft parking, gate allocation, airline coordination, slot management, and daily flight scheduling, along with the seamless facilitation of VIP and chartered flights. I’ve also overseen the allocation of check-in counters, entry gates, boarding bridges, and parking bays with precision and foresight. */}
                               </p>
                               <br />
 
@@ -38,12 +42,21 @@ const About = () => {
                                </p>
                                <br />
                                <p>
-                                I take pride in my capacity to lead with integrity, adapt under pressure, and deliver results in mission-critical environments. With proven expertise in aviation operations and security, I am confident in my ability to add value in any role—be it in the aviation sector, government service, or within international organizations.
+                                {/* I take pride in my capacity to lead with integrity, adapt under pressure, and deliver results in mission-critical environments. */}
+                                
+                                 {/* With proven expertise in aviation operations and security, I am confident in my ability to add value in any role—be it in the aviation sector, government service, or within international organizations. */}
                                </p>
+                               
                              </div>
-                         </div>                                         
+                               <div className="text-center text-sm text-gray-400 mt-4">2</div>
+                                                                <div className="flex justify-end">
+                                                                   <Button type="primary" onClick={() => navigate('/experience')}> <HiChevronDoubleRight /> </Button>
+                                                                   </div>
+                         </div>  
+                                                                 
                        </div>
-                     </div>                              
+                     </div>  
+                                                 
                  </div>
     );
 };

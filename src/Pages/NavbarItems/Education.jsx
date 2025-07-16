@@ -1,36 +1,39 @@
 
 import React from 'react';
-import {  Card } from 'antd';
+import { Button, Card } from 'antd';
+import { useNavigate } from 'react-router';
+import { HiChevronDoubleRight } from "react-icons/hi";
 const { Meta } = Card;
 
 import hsiaLogo from '../../assets/EducationPhoto/hsia.jpg';
-import flightLogo from '../../assets/EducationPhoto/flight.jpg';
+import flightLogo from '../../assets/skills/flight management.jpeg';
 import officerLogo from '../../assets/EducationPhoto/officer-incharge.jpeg';
 import squadronLogo from '../../assets/EducationPhoto/squadron.jpeg';
 const Education = () => {
+    const navigate = useNavigate();
       const educationData = [
     {
       year: '2015 - 2019',
       title: 'BBA - Bangladesh University of Professional-BUP',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates.',
     },
     {
       year: '2010 - 2012',
       title: 'HSC : Business Studies - Dhaka Residential School & College',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates.',
     },
     {
       year: '2001 - 2010',
       title: 'SSC : Business Studies - Bangladesh Nevy School & College',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates.',
     },
   ];
   const servicesData = [
     {
-      title: 'Airport Flight Management & Operation',  
+      title: 'Flight Management',  
       logo: flightLogo, // Path to your image
     },
     {
@@ -48,9 +51,9 @@ const Education = () => {
   ];
     return (
         
-            <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-6 flex justify-center items-center">
-               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl m-4 p-8'>
-                   <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
+            <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-4 flex justify-center items-center">
+               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl p-8'>
+                   <div className="bg-white rounded-xl shadow-lg h-135 w-250 max-w-5xl flex flex-col md:flex-row overflow-hidden">
                        {/* Left Side - Profile */}
                          <div className="  w-full md:w-1/2 p-8 flex flex-col items-center "> 
                          <h2 className='text-2xl font-bold m-4'>Education  </h2>  
@@ -81,14 +84,19 @@ const Education = () => {
                                                 
                                                 <h3 className="font-semibold">{service.title}</h3>
                                                 <p className="text-sm text-gray-600">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor sit amet consectetur
                                                 </p>
                                                 
                                                 </div>
                                             </Card>
                                          ))}
                                  </div>
+                                                             <div className="text-center text-sm text-gray-400 mt-4">4</div>
+                                                                <div className="flex justify-end">
+                                                                   <Button type="primary" onClick={() => navigate('/course')}><HiChevronDoubleRight /></Button>
+                                                                   </div>
                              </div>
+                             
                          </div>                                         
                        </div>
                      </div>                              

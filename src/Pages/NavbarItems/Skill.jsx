@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
+import { useNavigate } from 'react-router';
 import flight from '../../assets/skills/flight management.jpeg'
 import cargo from '../../assets/skills/cargo.jpg'
 import avsec from '../../assets/skills/avsec.jpg'
@@ -18,17 +19,18 @@ import weapon from '../../assets/skills/weapon.jpg'
 
 const { Meta } = Card;
 const Skill = () => {
+  const navigate = useNavigate();
     return (
         
-                      <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-6 flex justify-center items-center">
-               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl m-4 p-8'>
-                   <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
+                      <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-4 flex justify-center items-center">
+               <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl  p-8'>
+                   <div className="bg-white rounded-xl shadow-lg h-135 w-250 max-w-5xl flex flex-col md:flex-row overflow-hidden">
                        {/* Left Side - Profile */}
                          <div className="  w-full md:w-1/2 p-8 flex flex-col items-center "> 
-                         <h2 className='text-2xl font-bold m-4'>Skill Pages  </h2>  
+                         {/* <h2 className='text-2xl font-bold m-4'>Skill Pages  </h2>   */}
                             <div className='flex mb-4'>
                              
-                                      <div className='flex flex-wrap justify-start m-2 flex gap-2'>
+                                      <div className='flex flex-wrap justify-start flex gap-2'>
                                            
                                               <Card
                                                 hoverable
@@ -100,7 +102,8 @@ const Skill = () => {
                          </div>
                        {/* Right Side - Experience */}    
                                                   
-                         <div className="w-full flex flex-wrap justify-start md:w-1/2 bg-gray-100 p-8 gap-2 mt-18 mb-54">                                 
+                         <div className="w-full flex flex-wrap justify-start md:w-1/2 bg-gray-100 mt-8 ms-8 gap-2 ">                                 
+                                            
                                              <Card
                                              
                                                 hoverable
@@ -138,11 +141,43 @@ const Skill = () => {
                                             >
                                                 <Meta className='font-bold' title="" description="Security Management" />
                                             </Card> 
-                             
-                         </div>                                         
+                                              <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={sita} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="SITA" />
+                                            </Card>
+                                              <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={security} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="Security Management" />
+                                            </Card> 
+                                              <Card
+                                                hoverable
+                                                style={{ width: 135, height: 180 }}
+                                                cover={<img className='h-28 w-full' alt="example" src={sita} />}
+                                            >
+                                                <Meta className='font-bold' title="" description="SITA" />
+                                            </Card>
+
+                                                                                                  
+                               {/* <div className="text-center text-sm text-gray-400 mt-4">6</div> */}
+                                  <div className="justify-end buttom-end right-4 ">
+                                  <Button type="primary" onClick={() => navigate('/navbar-gallery')}>6</Button>
+                              </div>  
+                                                               
+                              
+                              </div> 
+
+                         </div>   
+                                   
                        </div>
+                         
                      </div>                              
-                 </div>
+                 
     );
 };
 

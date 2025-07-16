@@ -17,9 +17,9 @@ const Navbar = () => {
     { label: 'Experience', path: '/experience' },
     { label: 'Education', path: '/navbar-education' },
     { label: 'Course', path: '/course' },
-    { label: 'Award', path: '/award' },
+    // { label: 'Award', path: '/award' },
     { label: 'Skills', path: '/skills' },
-    { label: 'Projects', path: '/projects' },
+    // { label: 'Projects', path: '/projects' },
     { label: 'Gallery', path: '/navbar-gallery' },
   ];
 

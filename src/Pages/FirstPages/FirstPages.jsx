@@ -1,6 +1,7 @@
 import { Button, Avatar, Timeline, Card, } from 'antd';
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { Typography } from 'antd';
+import { HiChevronDoubleRight } from "react-icons/hi";
 
 const { Title, Text } = Typography;
 import {
@@ -42,9 +43,9 @@ const FirstPages = () => {
     return (
         
         
-                <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-6 flex justify-center items-center">
-                    <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl m-4 p-8'>
-                                 <div className="bg-white rounded-xl shadow-lg w-full max-w-5xl flex flex-col md:flex-row overflow-hidden">
+                <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-4 flex justify-center items-center">
+                    <div className='bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl  p-8'>
+                                 <div className="bg-white rounded-xl shadow-lg  max-w-5xl flex flex-col md:flex-row overflow-hidden h-135 w-250">
                         {/* Left Side - Profile */}
                         <div className="w-full md:w-1/2 p-8 flex flex-col items-center text-center">
                         <Avatar size={200} src={sirPhoto} className="mb-4" />
@@ -99,9 +100,9 @@ const FirstPages = () => {
                                 </Timeline.Item>
                                 ))}
                             </Timeline>
-                            <div className="text-center text-sm text-gray-400 mt-4">1</div>
-                                                           <div className="flex justify-end">
-                                <Button type="primary" onClick={() => navigate('/second-page')}>1</Button>
+                            <div className="text-center text-sm text-gray-400 mt-4 ">1</div>
+                             <div className="flex justify-end">
+                                <Button  type="primary" onClick={() => navigate('/about')}> <HiChevronDoubleRight /> </Button>
                                 </div>
                             </div>
                                 
