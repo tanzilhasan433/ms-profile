@@ -18,6 +18,8 @@ import About from "../Pages/NavbarItems/About";
 import Award from "../Pages/NavbarItems/Award";
 import Education from "../Pages/NavbarItems/Education";
 import Certificate from "../Pages/SubPages/Certificate";
+import FlipBook from "../Pages/NavbarItems/FlipBook";
+
 
       export const router = createBrowserRouter([
     {
@@ -87,6 +89,10 @@ import Certificate from "../Pages/SubPages/Certificate";
             {
                 path: 'certificate',
                 element: <Certificate></Certificate>
+            },
+            {
+                path: 'flip-book',
+                element: <FlipBook></FlipBook>
             },
 
         ]
