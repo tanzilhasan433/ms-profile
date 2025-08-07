@@ -6,7 +6,6 @@
 
 // import { Document, pdfjs } from "react-pdf";
 
-
 // pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 // const Pages = React.forwardRef((props, ref) => {
@@ -49,10 +48,6 @@
 // }
 
 // export default FlipBook;
-
-
-
-
 
 // import HTMLFlipBook from "react-pageflip";
 // import FirstPages from "../FirstPages/FirstPages";
@@ -98,40 +93,36 @@
 
 // export default FlipBook;
 
-
-
-
 import React, { useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import FirstPages from "../FirstPages/FirstPages";
 import About from "./About";
 import Education from "./Education";
 import { Button } from "antd";
+import FirstPageRightSide from "../FirstPages/FirstPageRightSide";
 
 const FlipBook = () => {
   const flipBookRef = useRef();
 
   return (
-    <div className=" mx-auto ">
-      
+    <div className=" ">
       {/* Flipbook Component */}
-<div className="flex justify-center bg-gradient-to-r from-indigo-950 to-indigo-800">
+      <div className="flex justify-center items-center bg-gradient-to-r from-indigo-950 to-indigo-800">
         <HTMLFlipBook
-        width={800}
-        height={500}
-        // size="stretch"
-        // minWidth={315}
-        // maxWidth={1000}
-        // minHeight={400}
-        // maxHeight={1536}
-        // maxShadowOpacity={0.5}
-        // showCover={true}
-        // mobileScrollSupport={true}
-        className="shadow-2xl "
-        ref={flipBookRef}
-
-      >
-        {/* <div className="bg-white p-6">
+          width={500}
+          height={600}
+          // size="stretch"
+          // minWidth={315}
+          // maxWidth={1000}
+          // minHeight={400}
+          // maxHeight={1536}
+          // maxShadowOpacity={0.5}
+          // showCover={true}
+          // mobileScrollSupport={true}
+          className=" "
+          ref={flipBookRef}
+        >
+          {/* <div className="bg-white p-6">
           <FirstPages />
         </div>
         <div className="bg-white p-6">
@@ -140,12 +131,21 @@ const FlipBook = () => {
         <div className="bg-white p-6">
           <Education />
         </div> */}
-        <div className="demoPage bg-amber-400"><FirstPages /></div>
-            <div className="demoPage bg-cyan-500"><FirstPages /></div>
-            <div className="demoPage bg-violet-500"><FirstPages /></div>
-            <div className="demoPage bg-red-500"><FirstPages /></div>
-      </HTMLFlipBook>
-</div>
+
+          <div className="  ">
+            <FirstPages />
+          </div>
+          <div className="">
+            <FirstPageRightSide />
+          </div>
+          <div className="  ">
+            <FirstPages />
+          </div>
+          <div className="">
+            <FirstPageRightSide />
+          </div>
+        </HTMLFlipBook>
+      </div>
 
       {/* Navigation Buttons */}
       <div className="flex space-x-4 mt-6">
