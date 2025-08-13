@@ -1,10 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Card } from "antd";
-import { useNavigate } from "react-router";
 import { HiChevronDoubleRight } from "react-icons/hi";
-import { HiChevronDoubleLeft } from "react-icons/hi";
 import { EnvironmentOutlined, ClockCircleOutlined } from "@ant-design/icons";
-// import { Timeline, Card } from 'antd';
 import Flight from "../../assets/skills/flight management.jpeg";
 import Leader from "../../assets/skills/avsec.jpg";
 import Officer from "../../assets/skills/military traning.png";
@@ -42,7 +39,7 @@ const ExperienceCard = ({ exp }) => (
       <img
         src={exp.icon}
         alt="logo"
-        className="w-24 h-24 object-contain mt-1"
+        className="w-16 h-16 object-contain mt-1"
       />
       <div>
         <h3 className="text-lg font-semibold">{exp.title}</h3>
@@ -59,59 +56,28 @@ const ExperienceCard = ({ exp }) => (
 );
 
 const ExperienceSection = () => {
-  const navigate = useNavigate();
+  const flipBookRef = useRef();
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-950 to-indigo-800 p-4 flex justify-center items-center">
-      <div className="bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl  p-8">
-        <div className="bg-white rounded-xl shadow-lg h-135 w-250 max-w-5xl flex flex-col md:flex-row overflow-hidden">
+    <div className="h-[500px]  w-[550px] my-10   flex justify-center items-center  ">
+      <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
+        <div className="bg-white  rounded-xl">
           {/* Left Side - Profile */}
-          <div className="  w-full md:w-1/2 p-8 flex flex-col items-center ">
-            <h2 className="text-2xl font-bold m-4">Future Experience </h2>
-            <div className="flex mb-4">
-              <p className="ms-4 mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quam
-                repudiandae animi aliquam adipisci! Itaque, repellendus
-                laudantium reiciendis libero facere magni, quo hic totam iusto
-                quia saepe delectus maxime, sequi atque iure fugit excepturi!
-                Minima, nobis ad temporibus consequuntur consectetur fuga cum
-                numquam earum veniam, voluptas odit error cumque! Facere
-                accusamus laborum incidunt culpa illum deleniti corporis tenetur
-                provident nemo voluptatibus possimus fugit, neque dolor deserunt
-                dolore quaerat molestiae reprehenderit ut non doloribus
-                inventore. Nulla harum reprehenderit sequi praesentium totam,
-                nam qui repudiandae blanditiis quae ullam, quaerat aperiam
-                fugit! Provident rem reprehenderit at dolores nobis! Unde cumque
-                vitae ullam excepturi. 
-                {/* Doloremque temporibus incidunt expedita veritatis culpa corporis et possimus unde excepturi vero. */}
-              </p>
+          <div className="  mx-auto   p-6 rounded-md">
+            <div className="max-w-2xl mx-auto p-2">
+              <h2 className="text-2xl font-bold text-center ">Experience</h2>
+              {experiences.map((exp, idx) => (
+                <ExperienceCard exp={exp} key={idx} />
+              ))}
             </div>
-                      <div className=" text-sm text-gray-400 mt-2">5</div>
-                          <div className="mb-2 w-full flex justify-start">
-                            <Button type="primary" onClick={() => navigate("/about")}>
-                              <HiChevronDoubleLeft />
-                            </Button>
-                          </div>
           </div>
-          {/* Right Side - Experience */}
-          <div className="w-full md:w-1/2 bg-gray-100  ">
-            <div>
-              <div className="max-w-2xl mx-auto p-2">
-                {/* <h2 className="text-2xl font-bold text-center ">Experience</h2> */}
-                {experiences.map((exp, idx) => (
-                  <ExperienceCard exp={exp} key={idx} />
-                ))}
-              </div>
-            </div>
-            <div className="text-center text-sm text-gray-400 mt-4">6</div>
-            <div className="flex justify-end">
-              <Button
-                type="primary"
-                onClick={() => navigate("/navbar-education")}
-              >
-                {" "}
-                <HiChevronDoubleRight />{" "}
-              </Button>
-            </div>
+          <div className="flex justify-end ">
+            <Button
+              type="primary"
+              size="large"
+              onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+            >
+              <HiChevronDoubleRight />
+            </Button>
           </div>
         </div>
       </div>

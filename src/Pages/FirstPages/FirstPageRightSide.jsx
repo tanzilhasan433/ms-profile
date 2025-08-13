@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import { Button, Avatar, Timeline, Card } from "antd";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { Typography } from "antd";
@@ -5,7 +6,7 @@ import { HiChevronDoubleRight } from "react-icons/hi";
 
 const { Title, Text } = Typography;
 
-import { useNavigate } from "react-router";
+
 
 const experiences = [
   {
@@ -29,7 +30,7 @@ const experiences = [
 ];
 
 const FirstPageRightSide = () => {
-  const navigate = useNavigate();
+   const flipBookRef = useRef();
   return (
     <div className="h-[500px]  w-[550px] my-10  p-4 flex justify-center items-center  ">
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
@@ -58,10 +59,13 @@ const FirstPageRightSide = () => {
             </Timeline>
 
             <div className="flex justify-end mb-2">
-              <Button type="primary" onClick={() => navigate("/about")}>
-                {" "}
-                <HiChevronDoubleRight />{" "}
-              </Button>
+              <Button
+                              type="primary"
+                              size="large"
+                              onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+                            >
+                              <HiChevronDoubleRight />
+                            </Button>
             </div>
           </div>
         </div>

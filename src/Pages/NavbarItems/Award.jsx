@@ -95,3 +95,26 @@ export default Award;
 
 
 
+          // <div className="w-full md:w-1/2 bg-gray-100 p-8">
+          //    <h2 className="text-2xl font-bold ">Award </h2>
+          //   <div>
+          //     <img
+          //       src={caabImages2[certificatePage - 1]}
+          //       alt={`Certificate ${certificatePage}`}
+          //       className="w-full h-96 object-contain"
+          //     />
+          //     <Pagination
+          //       current={certificatePage}
+          //       onChange={handleCertificateChange}
+          //       total={caabImages2.length}
+          //       pageSize={1}
+          //       className="text-center"
+          //     />
+          //   </div>
+          //   <div className="text-center text-sm text-gray-400 ">10</div>
+          //   <div className="flex justify-end">
+          //     <Button type="primary" onClick={() => navigate("/skills")}>
+          //       <HiChevronDoubleRight />
+          //     </Button>
+          //   </div>
+          // </div>
