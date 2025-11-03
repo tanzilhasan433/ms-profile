@@ -1,3 +1,4 @@
+import React, { useRef } from "react";
 import { useState } from "react";
 import { HiChevronDoubleLeft } from "react-icons/hi";
 import Caab1 from "../../assets/certificate/CAAB Certificate_1.JPEG.jpg";
@@ -9,7 +10,7 @@ import { Button, Card } from "antd";
 import { Pagination } from "antd";
 const { Meta } = Card;
 const Course = () => {
-
+const flipBookRef = useRef();
   const caabImages = [Caab1, Caab2, Caab3, Caab7];
   const [currentPage, setCurrentPage] = useState(1);
   const handlePageChange = (page) => {
@@ -20,22 +21,32 @@ const Course = () => {
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
         <div className="bg-white  rounded-xl ">
           {/* Left Side - Profile */}
-          <div className="  mx-auto   p-6 rounded-md">
+          <div className="  mx-auto   p-2 rounded-md">
             <h2 className="text-2xl font-bold text-center">Courses Certificate </h2>
             <img
               src={caabImages[currentPage - 1]}
               alt={`Certificate ${currentPage}`}
-              className="w-full h-96 object-contain mt-4"
+              className="w-full h-96 object-contain "
             />
             <Pagination
               current={currentPage}
               onChange={handlePageChange}
               total={caabImages.length}
               pageSize={1}
-              className="mt-8"
+              className=""
             />
           </div>
+          <div className="  w-full flex justify-start">
+                                  <Button
+                                    type="primary"
+                                    size=""
+                                    onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+                                  >
+                                    <HiChevronDoubleLeft />
+                                  </Button>
+                                </div>
         </div>
+        
       </div>
     </div>
   );

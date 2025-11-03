@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Card } from "antd";
 
 import { HiChevronDoubleRight } from "react-icons/hi";
@@ -10,6 +10,7 @@ import officerLogo from "../../assets/EducationPhoto/officer-incharge.jpeg";
 import squadronLogo from "../../assets/EducationPhoto/squadron.jpeg";
 
 const Service = () => {
+   const flipBookRef = useRef();
   const servicesData = [
     {
       title: "Flight Management",
@@ -33,7 +34,7 @@ const Service = () => {
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
         <div className="bg-white  rounded-xl  ">
           <h2 className="font-bold text-2xl text-center ">Service</h2>
-        <div className="grid grid-cols-2   mt-4 mx-auto  p-6 rounded-md">
+        <div className="grid grid-cols-2   mt-2 mx-auto  p-4 rounded-md">
            
           {servicesData.map((service, index) => (
             <Card key={index} className="text-center shadow-md">
@@ -53,6 +54,15 @@ const Service = () => {
               </div>
             </Card>
           ))}
+          <div className="mt-4  w-full flex justify-start">
+                        <Button
+                          type="primary"
+                          size=""
+                          onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+                        >
+                          <HiChevronDoubleLeft />
+                        </Button>
+                      </div>
         </div>
         </div>
       </div>

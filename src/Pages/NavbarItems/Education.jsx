@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Card } from "antd";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import { HiChevronDoubleLeft } from "react-icons/hi";
 const { Meta } = Card;
 
 const Education = () => {
-  
+   const flipBookRef = useRef();
   const educationData = [
     {
       year: "2015 - 2019",
@@ -32,7 +32,7 @@ const Education = () => {
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
         <div className="bg-white  rounded-xl ">
           {/* Left Side - Profile */}
-          <div className="  mx-auto   p-6 rounded-md ">
+          <div className="  mx-auto   p-4 rounded-md ">
             <h2 className="text-2xl font-bold text-center">Education </h2>
             <div className="flex mb-4">
               <div className="space-y-8 border-l-2 border-blue-500 pl-4">
@@ -48,8 +48,15 @@ const Education = () => {
             </div>
                         
           </div>
-          
-
+          <div className="flex justify-end ">
+                      <Button
+                        type="primary"
+                        size="large"
+                        onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+                      >
+                        <HiChevronDoubleRight />
+                      </Button>
+                    </div>
         </div>
       </div>
     </div>

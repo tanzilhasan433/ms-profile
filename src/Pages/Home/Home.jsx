@@ -1,12 +1,13 @@
-import FirstPages from "../FirstPages/FirstPages";
+// import FirstPages from "../FirstPages/FirstPages";
+import FlipBook from "../NavbarItems/FlipBook";
 
 
 const Home = () => {
     return (
         
         <div>
-             
-            <FirstPages></FirstPages>
+             <FlipBook></FlipBook>
+            {/* <FirstPages></FirstPages> */}
            
         </div>
     );

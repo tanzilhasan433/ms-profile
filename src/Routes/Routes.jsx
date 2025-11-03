@@ -20,6 +20,11 @@ import Education from "../Pages/NavbarItems/Education";
 import Certificate from "../Pages/SubPages/Certificate";
 import FlipBook from "../Pages/NavbarItems/FlipBook";
 import Service from "../Pages/NavbarItems/Service";
+import FirstPageRead from "../Pages/SubPages/FirstPageRead";
+import AboutTwo from "../Pages/NavbarItems/AboutTwo";
+import EducationTwo from "../Pages/NavbarItems/EducationTwo";
+import SkillTwo from "../Pages/NavbarItems/SkillTwo";
+import GalleryLatest from "../Pages/NavbarItems/GalleryLatest";
 
 
       export const router = createBrowserRouter([
@@ -98,6 +103,26 @@ import Service from "../Pages/NavbarItems/Service";
             {
                 path: 'flip-book',
                 element: <FlipBook></FlipBook>
+            },
+            {
+                path: 'first-page-read',
+                element: <FirstPageRead></FirstPageRead>
+            },
+            {
+                path: 'about-two',
+                element: <AboutTwo></AboutTwo>
+            },
+            {
+                path: 'education-two',
+                element: <EducationTwo></EducationTwo>
+            },
+            {
+                path: 'skill-two',
+                element: <SkillTwo></SkillTwo>
+            },
+            {
+                path: 'gallery-latest',
+                element: <GalleryLatest></GalleryLatest>
             },
 
         ]

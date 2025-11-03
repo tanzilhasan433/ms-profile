@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, Card } from "antd";
+import { HiChevronDoubleRight } from "react-icons/hi";
 // import { useNavigate } from "react-router";
 import flight from "../../assets/skills/flight management.jpeg";
 import cargo from "../../assets/skills/cargo.jpg";
@@ -20,15 +21,15 @@ import { HiChevronDoubleLeft } from "react-icons/hi";
 
 const { Meta } = Card;
 const Skill = () => {
-  // const navigate = useNavigate();
+  const flipBookRef = useRef();
   return (
     <div className="h-[500px]  w-[550px] my-10  p-4 flex justify-center items-center  ">
       <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl p-6">
         <div className="bg-white  rounded-xl">
           {/* Left Side - Profile */}
-          <div className="  mx-auto   p-6 rounded-md  ">
+          <div className="  mx-auto   p-4 rounded-md  ">
             <h2 className="text-2xl font-bold m-2 text-center">Skill Pages </h2>
-            <div className="flex mb-4 mt-4">
+            <div className="flex ">
               <div className="flex flex-wrap justify-start gap-2">
                 <Card
                   hoverable
@@ -115,12 +116,16 @@ const Skill = () => {
                 </Card>
               </div>
             </div>
-            
-
+            <div className="flex justify-end ">
+              <Button
+                type="primary"
+                size="large"
+                onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+              >
+                <HiChevronDoubleRight />
+              </Button>
+            </div>
           </div>
-          {/* Right Side - Experience */}
-
-
         </div>
       </div>
     </div>
@@ -128,87 +133,3 @@ const Skill = () => {
 };
 
 export default Skill;
-
-
-
-
-            // <div className=" text-sm text-gray-400 mt-2">12</div>
-            // <div className="mb-2 w-full flex justify-end">
-            //   <Button
-            //     type="primary"
-            //     onClick={() => navigate("/navbar-gallery")}
-            //   >
-            //     <HiChevronDoubleRight />
-            //   </Button>
-            // </div>
-
-
-
-            //             <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={<img className="h-28 w-full" alt="example" src={joint} />}
-            // >
-            //   <Meta
-            //     className="font-bold"
-            //     title=""
-            //     description="Joint Service"
-            //   />
-            // </Card>
-            // <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={
-            //     <img className="h-28 w-full" alt="example" src={militery} />
-            //   }
-            // >
-            //   <Meta
-            //     className="font-bold"
-            //     title=""
-            //     description="Military Training"
-            //   />
-            // </Card>
-            // <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={<img className="h-28 w-full" alt="example" src={weapon} />}
-            // >
-            //   <Meta
-            //     className="font-bold"
-            //     title=""
-            //     description="Weapon Traning"
-            //   />
-            // </Card>
-            // <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={<img className="h-28 w-full" alt="example" src={sita} />}
-            // >
-            //   <Meta className="font-bold" title="" description="SITA" />
-            // </Card>
-            // <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={
-            //     <img className="h-28 w-full" alt="example" src={security} />
-            //   }
-            // >
-            //   <Meta
-            //     className="font-bold"
-            //     title=""
-            //     description="Security Management"
-            //   />
-            // </Card>
-            // <Card
-            //   hoverable
-            //   style={{ width: 135, height: 180 }}
-            //   cover={
-            //     <img className="h-28 w-full" alt="example" src={public1} />
-            //   }
-            // >
-            //   <Meta
-            //     className="font-bold"
-            //     title=""
-            //     description="Public Service"
-            //   />
-            // </Card>

@@ -15,7 +15,6 @@ import GalleryTwo from "../Gallery/GalleryTwo";
 
 const FlipBook = () => {
   const flipBookRef = useRef();
-
   return (
     <div className=" ">
       {/* <Button
@@ -115,3 +114,5 @@ const FlipBook = () => {
 };
 
 export default FlipBook;
+
+

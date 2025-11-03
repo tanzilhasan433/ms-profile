@@ -13,15 +13,15 @@ const Navbar = () => {
 
   const menuItems = [
     { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Experience', path: '/experience' },
-    { label: 'Education', path: '/navbar-education' },
-    { label: 'Course', path: '/course' },
-    { label: 'Award', path: '/award' },
-    { label: 'Skills', path: '/skills' },
-    { label: 'FlipBook', path: '/flip-book' },
+    { label: 'About', path: '/about-two' },
+    // { label: 'Experience', path: '/experience' },
+    { label: 'Certificate', path: '/education-two' },
+    // { label: 'Course', path: '/course' },
+    // { label: 'Award', path: '/award' },
+    { label: 'Skills', path: '/skill-two' },
+    // { label: 'FlipBook', path: '/flip-book' },
     // { label: 'Projects', path: '/projects' },
-    { label: 'Gallery', path: '/navbar-gallery' },
+    { label: 'Gallery', path: '/gallery-latest' },
   ];
 
   return (
