@@ -59,7 +59,7 @@ const ExperienceSection = () => {
   const flipBookRef = useRef();
   return (
     <div className="h-[500px]  w-[550px] my-10   flex justify-center items-center  ">
-      <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-600 rounded-xl  p-5">
         <div className="bg-white  rounded-xl">
           {/* Left Side - Profile */}
           <div className="  mx-auto   p-6 rounded-md">

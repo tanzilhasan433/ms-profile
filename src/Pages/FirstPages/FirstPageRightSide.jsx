@@ -5,35 +5,32 @@ import { Typography } from "antd";
 import { HiChevronDoubleRight } from "react-icons/hi";
 
 const { Title, Text } = Typography;
-
-
-
 const experiences = [
   {
     year: "2022 - Present",
     title: "Squadron Leader – Bangladesh Air Force",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.",
+      " Spearheaded airport security initiatives ensuring aviation and passenger safety.",
   },
   {
     year: "2022 - Present",
     title: "ASM at Flight Management – HSIA",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.",
+      "Oversaw daily flight operations for over 300 domestic and international flights across 2 terminals and 42 airlines, under the challenge of a single-runway system. Led the development and implementation of the HSIA Flight Management Software to streamline data processing.",
   },
   {
     year: "2022 - 2023",
     title: "Officer In-charge – Bangladesh Air Force C & M Unit",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas obcaecati animi vel minus dolore vitae magni voluptates, nihil repellendus, libero dicta, eligendi quis ipsa id.",
+      " Oversaw unit security, ensuring a safe and secure operational environment.  ",
   },
 ];
 
 const FirstPageRightSide = () => {
-   const flipBookRef = useRef();
+  const flipBookRef = useRef();
   return (
     <div className="h-[500px]  w-[550px] my-10  p-2 flex justify-center items-center  ">
-      <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
+      <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-4">
         <div className="bg-white  rounded-xl    ">
           <div className="  mx-auto   p-6 rounded-md ">
             <Title level={3} className="text-center font-bold ">
@@ -60,12 +57,12 @@ const FirstPageRightSide = () => {
 
             <div className="flex justify-end mb-2">
               <Button
-                              type="primary"
-                              size="large"
-                              onClick={() => flipBookRef.current.pageFlip().flipPrev()}
-                            >
-                              <HiChevronDoubleRight />
-                            </Button>
+                type="primary"
+                size="large"
+                onClick={() => flipBookRef.current.pageFlip().flipPrev()}
+              >
+                <HiChevronDoubleRight />
+              </Button>
             </div>
           </div>
         </div>

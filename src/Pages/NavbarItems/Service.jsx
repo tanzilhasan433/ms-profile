@@ -31,7 +31,7 @@ const Service = () => {
   ];
   return (
     <div className="h-[500px]  w-[550px] my-10  p-4 flex justify-center items-center  ">
-      <div className="bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl  p-5">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-600 rounded-xl  p-5">
         <div className="bg-white  rounded-xl  ">
           <h2 className="font-bold text-2xl text-center ">Service</h2>
         <div className="grid grid-cols-2   mt-2 mx-auto  p-4 rounded-md">
